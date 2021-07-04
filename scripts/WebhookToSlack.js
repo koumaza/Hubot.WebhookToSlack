@@ -4,7 +4,7 @@ module.exports = (robot) => {
 	robot.router.post('/hubot/webhooks', (req, res) => {
 		const channel = 'YourChannel'
 		let recievedBody = req.body
-		console.log(recievedBody)
+		console.info(`Recieved: ${recievedBody}`)
 		let data = {
 			attachments: JSON.stringify([{
 				"fallback": recievedBody.fallback,
